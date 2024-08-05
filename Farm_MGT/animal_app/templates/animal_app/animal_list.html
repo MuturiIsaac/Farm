@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Animal List{% endblock %}
+
+{% block content %}
+    <h2>Animal List</h2>
+    <a href="{% url 'animal_create' %}" class="btn btn-primary mb-3">Add New Animal</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Breed</th>
+                <th>Species</th>
+                <th>Birth Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animal in animals %}
+                <tr>
+                    <td>{{ animal.identification }}</td>
+                    <td>{{ animal.breed }}</td>
+                    <td>{{ animal.species }}</td>
+                    <td>{{ animal.birth_date }}</td>
+                    <td>
+                        <a href="{% url 'animal_detail' animal.pk %}" class="btn btn-info btn-sm">Details</a>
+                        <a href="{% url 'animal_update' animal.pk %}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{% url 'animal_delete' animal.pk %}" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

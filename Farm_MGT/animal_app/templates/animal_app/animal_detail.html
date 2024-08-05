@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Animal Detail{% endblock %}
+
+{% block content %}
+    <h2>Animal Detail</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <td>{{ animal.identification }}</td>
+        </tr>
+        <tr>
+            <th>Breed</th>
+            <td>{{ animal.breed }}</td>
+        </tr>
+        <tr>
+            <th>Species</th>
+            <td>{{ animal.species }}</td>
+        </tr>
+        <tr>
+            <th>Birth Date</th>
+            <td>{{ animal.birth_date }}</td>
+        </tr>
+    </table>
+    <a href="{% url 'animal_update' animal.pk %}" class="btn btn-warning">Edit</a>
+    <a href="{% url 'animal_delete' animal.pk %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'animal_list' %}" class="btn btn-secondary">Back to List</a>
+{% endblock %}

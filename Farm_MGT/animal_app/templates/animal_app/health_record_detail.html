@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Health Record Detail{% endblock %}
+
+{% block content %}
+    <h2>Health Record Detail</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Animal</th>
+            <td>{{ health_record.animal }}</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>{{ health_record.date }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ health_record.description }}</td>
+        </tr>
+    </table>
+    <a href="{% url 'health_record_update' health_record.pk %}" class="btn btn-warning">Edit</a>
+    <a href="{% url 'health_record_delete' health_record.pk %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'health_record_list' %}" class="btn btn-secondary">Back to List</a>
+{% endblock %}

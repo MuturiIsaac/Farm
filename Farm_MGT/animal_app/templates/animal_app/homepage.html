@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Farm Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'animal_list' %}">Animals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'health_record_list' %}">Health Records</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'breeding_record_list' %}">Breeding Records</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'diet_plan_list' %}">Diet Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'food_inventory_list' %}">Food Inventory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'feed_schedule_list' %}">Feed Schedules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'vaccination_list' %}">Vaccinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'disease_list' %}">Diseases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'vet_record_list' %}">Vet Records</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'stock_list' %}">Stocks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'equipment_list' %}">Equipment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'task_list' %}">Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'customer_list' %}">Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sale_list' %}">Sales</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Welcome to the Farm Management System</h1>
+                <p class="lead">Manage all aspects of your farm efficiently and effectively.</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Animals">
+                    <div class="card-body">
+                        <h5 class="card-title">Animals</h5>
+                        <p class="card-text">Manage your animals and their records.</p>
+                        <a href="{% url 'animal_list' %}" class="btn btn-primary">Go to Animals</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Health Records">
+                    <div class="card-body">
+                        <h5 class="card-title">Health Records</h5>
+                        <p class="card-text">Maintain health records for your animals.</p>
+                        <a href="{% url 'health_record_list' %}" class="btn btn-primary">Go to Health Records</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Breeding Records">
+                    <div class="card-body">
+                        <h5 class="card-title">Breeding Records</h5>
+                        <p class="card-text">Track breeding records of your animals.</p>
+                        <a href="{% url 'breeding_record_list' %}" class="btn btn-primary">Go to Breeding Records</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Diet Plans">
+                    <div class="card-body">
+                        <h5 class="card-title">Diet Plans</h5>
+                        <p class="card-text">Create and manage diet plans for your animals.</p>
+                        <a href="{% url 'diet_plan_list' %}" class="btn btn-primary">Go to Diet Plans</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Food Inventory">
+                    <div class="card-body">
+                        <h5 class="card-title">Food Inventory</h5>
+                        <p class="card-text">Manage your food inventory efficiently.</p>
+                        <a href="{% url 'food_inventory_list' %}" class="btn btn-primary">Go to Food Inventory</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Feed Schedules">
+                    <div class="card-body">
+                        <h5 class="card-title">Feed Schedules</h5>
+                        <p class="card-text">Create and manage feeding schedules for your animals.</p>
+                        <a href="{% url 'feed_schedule_list' %}" class="btn btn-primary">Go to Feed Schedules</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Vaccinations">
+                    <div class="card-body">
+                        <h5 class="card-title">Vaccinations</h5>
+                        <p class="card-text">Keep track of vaccinations for your animals.</p>
+                        <a href="{% url 'vaccination_list' %}" class="btn btn-primary">Go to Vaccinations</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Diseases">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseases</h5>
+                        <p class="card-text">Track and manage disease records.</p>
+                        <a href="{% url 'disease_list' %}" class="btn btn-primary">Go to Diseases</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Vet Records">
+                    <div class="card-body">
+                        <h5 class="card-title">Vet Records</h5>
+                        <p class="card-text">Maintain vet records for your animals.</p>
+                        <a href="{% url 'vet_record_list' %}" class="btn btn-primary">Go to Vet Records</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Stocks">
+                    <div class="card-body">
+                        <h5 class="card-title">Stocks</h5>
+                        <p class="card-text">Manage your farm's stocks.</p>
+                        <a href="{% url 'stock_list' %}" class="btn btn-primary">Go to Stocks</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Equipment">
+                    <div class="card-body">
+                        <h5 class="card-title">Equipment</h5>
+                        <p class="card-text">Manage your farm's equipment.</p>
+                        <a href="{% url 'equipment_list' %}" class="btn btn-primary">Go to Equipment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Tasks">
+                    <div class="card-body">
+                        <h5 class="card-title">Tasks</h5>
+                        <p class="card-text">Manage tasks and assignments on the farm.</p>
+                        <a href="{% url 'task_list' %}" class="btn btn-primary">Go to Tasks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Customers">
+                    <div class="card-body">
+                        <h5 class="card-title">Customers</h5>
+                        <p class="card-text">Manage customer information.</p>
+                        <a href="{% url 'customer_list' %}" class="btn btn-primary">Go to Customers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Sales">
+                    <div class="card-body">
+                        <h5 class="card-title">Sales</h5>
+                        <p class="card-text">Track sales and transactions.</p>
+                        <a href="{% url 'sale_list' %}" class="btn btn-primary">Go to Sales</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Custom Page">
+                    <div class="card-body">
+                        <h5 class="card-title">Custom Page</h5>
+                        <p class="card-text">Access the custom page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
